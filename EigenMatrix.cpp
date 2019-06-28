@@ -19,6 +19,12 @@ int main(int argc, char** argv)
             cout << matrix_23(i,j) << endl;
     v_3d << 3,2,1;
     Eigen::Matrix<double, 2, 1> result = matrix_23.cast<double>() * v_3d;
+    cout << "matrix multi vector = \n" << result << endl;
+    matrix_33 = Eigen::Matrix3d::Random();
+    cout << "matrix_33:\n" << matrix_33 << endl << endl;
+    cout << "transpose of matrix_33:\n" << matrix_33.transpose() << endl;
+    cout << "sum of matrix_33:\n" << matrix_33.sum() << endl;
+    cout << "ji:\n" << matrix_33.trace() << endl;
     cout<<"Hello SLAM !"<<endl;
     return 0;
 }
